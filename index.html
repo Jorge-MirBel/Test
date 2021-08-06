@@ -1,136 +1,14 @@
 
- 
-<html lang="en">
- 
-<head>
- 
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    <title>Use camera in HTML5 / JS</title>
- 
-    <style>    
- 
- 
-      button {
- 
-          font-size: 20px;
- 
-      }
- 
-      video {
-          width:640px;
-          height:480px;
-       }
- 
-      #overlay {
-          width:320px;
-          height:240px;
-          position: absolute;
-          top:0;
-          left:0;
-          pointer-events:none;
-	  background-image: url("Base.jpg");
-	  opacity: 0.8;
-       }
- 
-      #container {
-          position: absolute;
-          top:0;
-          left:0;
-       }
- 
-      img {
-          width:640px;
-          height:480px;
-          position: absolute;
-          top:0;
-          left:0;
-          /*left:645px;*/
-       }
- 
-      #my-canvas{
-          display:none;
-          width:640px;
-          height:480px;
-       }
- 
-    </style>
- 
-    <script>    
- 
-    var video;
-    var canvas;
-    var ctx;
-    var localMediaStream = null;
- 
- 
- 
-    function setup(){
-         if (hasGetUserMedia()) {
-             const constraints = {
-             video: true
-             };
- 
- 
- 
-            const video = document.querySelector('video');
-            navigator.mediaDevices.getUserMedia(constraints).then((stream) => {video.srcObject = stream});
- 
-        } else {
- 
-            alert('getUserMedia() is not supported by your browser');
- 
-        }
- 
-    }
- 
+ <html>
 
- 
-    function hasGetUserMedia() {
- 
-        return !!(navigator.mediaDevices &&  navigator.mediaDevices.getUserMedia);
- 
-    }
- 
- 
- 
-    function overlay(v){
- 
-        if (v){
- 
-            document.getElementById("overlay").style.display="block";
- 
-        } else {
- 
-            document.getElementById("overlay").style.display="none";          
- 
-        }
- 
-    }
- 
- 
- 
-    </script>
- 
-</head>
- 
- 
- 
-<body onload="setup();">
- 
-           <div id="container">
- 
-            <video autoplay></video>
- 
-            <canvas id="my-canvas"></canvas>
- 
-            <img>
- 
-            <div id="overlay"></div>
- 
-        </div>
- 
-
+<body>
+<p style="color:red;font-size:50px;">Asalto al pasado</p>
+<img src="1920.jpg">
+<p>Esta foto es...</p>
+<p>Instrucciones de uso.</p>
+<p>Version 6/8/21 15:58</p>
+<p><a href="https://jorge-mirbel.github.io/Capture">Visit W3Schools.com!</a></p>
 </body>
  
+
 </html>
